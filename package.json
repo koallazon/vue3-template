@@ -1,10 +1,25 @@
 {
   "name": "vue3-template",
+  "description": "Vue3, TailwindCSS, Pinia, Vue-router4, typescript",
   "private": true,
   "version": "0.0.0",
+  "author": "koallazon",
+  "main": "main.ts",
+  "keywords": [
+    "vue3",
+    "typescript",
+    "SPA",
+    "TEMPLATE"
+  ],
+  "license": "ISC",
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "dev": "vite --port 7070 --open --mode local",
+    "build:dev": "vue-tsc --noEmit && vite build --mode dev",
+    "build:main": "vue-tsc --noEmit && vite build --mode prod",
     "preview": "vite preview"
   },
   "dependencies": {
