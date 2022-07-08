@@ -8,8 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
-    env:
-      working-directory: ./app
 
     strategy:
       matrix:
@@ -35,8 +33,6 @@ jobs:
 
       - name: Package install
         run: npm install
-        working-directory: ${{ env.working-directory }}
 
       - name: App build
         run: npm run build:${{ steps.get-environment.outputs.branch }}
-        working-directory: ${{ env.working-directory }}
